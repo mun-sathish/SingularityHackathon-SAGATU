@@ -3,6 +3,6 @@ Sagatu is aimed at increasing the organization efficiency of the supply chain ma
 
 A back end database is built to monitor inventory, log the delivery status and in future perform price prediction analytics, reduce wastage of food through tradeoff analytics, and provide special offers based on the user’s activity log.
 
-VegiGate - Android Application
-jumboSupplyChain - Web Application
+VegiGate - Android Application\n
+jumboSupplyChain - Web Application\n
 WireFrame
