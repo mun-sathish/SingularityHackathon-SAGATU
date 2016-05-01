@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="jumbotail.singularity.vegigate.activity.LoginActivity">
+
+    <!--register - login layout-->
+    <RelativeLayout
+        android:id="@+id/main_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/register_background"
+        android:visibility="visible">
+
+
+        <!-- ImageView -->
+        <LinearLayout
+            android:id="@+id/top_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/middle_layout"
+            android:layout_alignParentTop="true"
+            android:orientation="vertical">
+
+            <com.facebook.shimmer.ShimmerFrameLayout
+                android:id="@+id/shimmer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/image"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_gravity="center_horizontal|center"
+                        android:gravity="center"
+                        android:src="@mipmap/icon" />
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-bold"
+                        android:gravity="center"
+                        android:text="Sagatu"
+                        android:textColor="@color/White"
+                        android:textSize="35sp" />
+                </LinearLayout>
+            </com.facebook.shimmer.ShimmerFrameLayout>
+        </LinearLayout>
+
+
+        <!-- Button & TextView and EditText layout -->
+        <LinearLayout
+            android:id="@+id/middle_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/text_heading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:text="Signing In. . . "
+                android:textColor="@color/White"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+            <!-- TextView and EditText -->
+            <LinearLayout
+                android:id="@+id/textview_edittext"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_gravity="center_vertical|center_horizontal|center"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <!-- TextView Layout -->
+                <LinearLayout
+                    android:id="@+id/textview"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="12dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/username"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Username: "
+                        android:textColor="@color/White" />
+
+                    <TextView
+                        android:id="@+id/phone"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="PassKey: "
+                        android:textColor="@color/White" />
+                </LinearLayout>
+
+
+                <!--  EditText Layout -->
+                <LinearLayout
+                    android:id="@+id/edittext"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/edit_username"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:hint="Username"
+                        android:inputType="text"
+                        android:maxHeight="1dp"
+                        android:maxLines="1"
+                        android:padding="5dp"
+                        android:textColor="@color/Yellow"
+                        android:textColorHint="@color/LightYellow" />
+
+                    <EditText
+                        android:id="@+id/edit_phone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="1"
+                        android:ems="10"
+
+                        android:hint="Password"
+                        android:inputType="textPassword"
+                        android:maxHeight="1dp"
+                        android:maxLines="1"
+                        android:padding="5dp"
+                        android:textColor="@color/Yellow"
+                        android:textColorHint="@color/LightYellow" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/login_incorrect"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="10dp"
+                android:text="Incorrect Register Number or Password"
+                android:textColor="@color/White" />
+            <!-- Login Button -->
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/White"
+                android:padding="2dp">
+
+                <com.rey.material.widget.Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@color/DeepPink"
+                    android:gravity="center"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:text="LOGIN"
+                    android:textColor="@color/White"
+                    android:onClick="login"
+
+                    app:rd_delayClick="afterRelease"
+                    app:rd_enable="true"
+                    app:rd_rippleColor="@color/LightGreen"
+                    app:rd_rippleType="touch" />
+            </LinearLayout>
+
+        </LinearLayout>
+</RelativeLayout>
+
+    </RelativeLayout>

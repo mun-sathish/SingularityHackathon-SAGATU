@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:id="@+id/total_layout"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_alignParentTop="true"
+        android:layout_gravity="top|center"
+        android:background="#ff40c67e"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="start"
+            android:maxLines="1"
+            android:text="Checkout Price: "
+            android:textColor="@color/White"
+            android:textSize="23dp"
+            />
+
+        <TextView
+            android:id="@+id/total_price_"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="end"
+            android:maxLines="1"
+            android:text="Rs. 500/-"
+            android:textColor="@color/White"
+            android:textSize="23dp"
+            />
+    </LinearLayout>
+
+
+    <com.marshalchen.ultimaterecyclerview.UltimateRecyclerView
+
+        android:id="@+id/listView_products_cart"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/checkout_btn"
+        android:layout_below="@+id/total_layout"
+        android:background="@color/LightGrey"
+        />
+
+    <com.rey.material.widget.Button
+        android:id="@+id/checkout_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom|center"
+        android:background="@color/OrangeRed"
+        android:onClick="checkout_cart"
+        android:padding="5dp"
+        android:text="Checkout"
+        android:textColor="@color/White"
+
+        app:rd_delayClick="afterRelease"
+        app:rd_enable="true"
+        app:rd_rippleColor="@color/LightGreen"
+        app:rd_rippleType="wave" />
+
+
+
+    <!--list is empty-->
+    <LinearLayout
+        android:id="@+id/empty_cart"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.2"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="invisible">
+
+        <ImageView
+            android:id="@+id/empty_cart_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/list_empty" />
+
+        <TextView
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cart is Empty!"
+            android:textSize="45sp"
+            android:textStyle="bold|italic" />
+
+    </LinearLayout>
+</RelativeLayout>

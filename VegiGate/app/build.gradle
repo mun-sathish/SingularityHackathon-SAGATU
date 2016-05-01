@@ -1,0 +1,47 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.2"
+
+    defaultConfig {
+        applicationId "jumbotail.singularity.vegigate"
+        minSdkVersion 16
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    testCompile 'junit:junit:4.12'
+    compile files('libs/volley.jar')
+
+
+
+
+
+    compile('com.mikepenz:materialdrawer:5.1.6@aar') {
+        transitive = true
+    }
+    compile('com.mikepenz:crossfader:1.3.6@aar') {
+        transitive = true
+    }
+
+
+    compile 'com.android.support:appcompat-v7:23.2.1'
+    compile 'com.android.support:cardview-v7:23.2.1'
+    compile 'com.github.rey5137:material:1.2.1'
+    compile 'com.facebook.shimmer:shimmer:0.1.0@aar'
+    compile 'com.google.android.gms:play-services-maps:8.4.0'
+    compile 'it.neokree:MaterialTabs:0.11'
+    compile 'com.android.support:support-v4:23.2.1'
+    compile 'com.marshalchen.ultimaterecyclerview:library:0.3.7'
+}

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.rey.material.widget.Button
+        android:id="@+id/basvan"
+        android:padding="10dp"
+        android:text="Basvangudi"
+        android:background="@null"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        app:rd_delayClick="afterRelease"
+        app:rd_enable="true"
+        app:rd_rippleColor="@color/LightGreen"
+        app:rd_rippleType="wave"/>
+
+    <com.rey.material.widget.Button
+        android:id="@+id/mara"
+        android:padding="10dp"
+        android:text="Marathahalli"
+        android:background="@null"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        app:rd_delayClick="afterRelease"
+        app:rd_enable="true"
+        app:rd_rippleColor="@color/LightGreen"
+        app:rd_rippleType="wave"/>
+
+    <com.rey.material.widget.Button
+        android:id="@+id/kora"
+        android:padding="10dp"
+        android:text="Koramangala"
+        android:background="@null"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        app:rd_delayClick="afterRelease"
+        app:rd_enable="true"
+        app:rd_rippleColor="@color/LightGreen"
+        app:rd_rippleType="wave"/>
+
+    <com.rey.material.widget.Button
+        android:id="@+id/vijay"
+        android:padding="10dp"
+        android:text="Vijayanagar"
+        android:background="@null"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        app:rd_delayClick="afterRelease"
+        app:rd_enable="true"
+        app:rd_rippleColor="@color/LightGreen"
+        app:rd_rippleType="wave"/>
+
+    <com.rey.material.widget.Button
+        android:id="@+id/hebbal"
+        android:padding="10dp"
+        android:text="Hebbal"
+        android:background="@null"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        app:rd_delayClick="afterRelease"
+        app:rd_enable="true"
+        app:rd_rippleColor="@color/LightGreen"
+        app:rd_rippleType="wave"/>
+</LinearLayout>
